@@ -1,0 +1,149 @@
+{
+    "id": 5,
+    "name": "quiz 5",
+    "time": 30,
+    "pass_mark": 30,
+    "total_questions": 5,
+    "questions": [
+        {
+            "id": 1,
+            "name": "The National Tree of Srilanka is?",
+            "type": "mcq",
+            "marks": 20,
+            "answers": [
+                {
+                    "id": 1,
+                    "name": "Mango tree",
+                    "correct": 0
+                },
+                {
+                    "id": 2,
+                    "name": "Na tree",
+                    "correct": 1
+                },
+                {
+                    "id": 3,
+                    "name": "Coconut tree",
+                    "correct": 0
+                },
+                {
+                    "id": 4,
+                    "name": "Jack tree",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "What is 92.53 ÷ 10?",
+            "type": "mcq",
+            "marks": 20,
+            "answers": [
+                {
+                    "id": 1,
+                    "name": "9.253",
+                    "correct": 1
+                },
+                {
+                    "id": 2,
+                    "name": "92.53",
+                    "correct": 0
+                },
+                {
+                    "id": 3,
+                    "name": "0.9253",
+                    "correct": 0
+                },
+                {
+                    "id": 4,
+                    "name": "925.3",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "2.34 + 1.7 equals to?",
+            "type": "mcq",
+            "marks": 20,
+            "answers": [
+                {
+                    "id": 1,
+                    "name": "2.51",
+                    "correct": 0
+                },
+                {
+                    "id": 2,
+                    "name": "3.04",
+                    "correct": 0
+                },
+                {
+                    "id": 3,
+                    "name": "3.14",
+                    "correct": 0
+                },
+                {
+                    "id": 4,
+                    "name": "4.04",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Which percent equals 1/4 ?",
+            "type": "mcq",
+            "marks": 20,
+            "answers": [
+                {
+                    "id": 1,
+                    "name": "14%",
+                    "correct": 0
+                },
+                {
+                    "id": 2,
+                    "name": "25%",
+                    "correct": 1
+                },
+                {
+                    "id": 3,
+                    "name": "50%",
+                    "correct": 0
+                },
+                {
+                    "id": 4,
+                    "name": "4%",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "What is 3.8 × 10?",
+            "type": "mcq",
+            "marks": 20,
+            "answers": [
+                {
+                    "id": 1,
+                    "name": "0.38",
+                    "correct": 0
+                },
+                {
+                    "id": 2,
+                    "name": "3.80",
+                    "correct": 0
+                },
+                {
+                    "id": 3,
+                    "name": "380",
+                    "correct": 0
+                },
+                {
+                    "id": 4,
+                    "name": "38",
+                    "correct": 1
+                }
+            ]
+        }
+    ]
+}

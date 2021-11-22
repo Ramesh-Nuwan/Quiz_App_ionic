@@ -1,0 +1,149 @@
+{
+    "id": 1,
+    "name": "quiz1",
+    "time": 30,
+    "pass_mark": 30,
+    "total_questions": 5,
+    "questions": [
+        {
+            "id": 1,
+            "name": "Who is the president of Sri Lanka?",
+            "type": "mcq",
+            "marks": 20,
+            "answers": [
+                {
+                    "id": 1,
+                    "name": "Mahinda Rajapakshe",
+                    "correct": 0
+                },
+                {
+                    "id": 2,
+                    "name": "Gotabaya Rajapakshe",
+                    "correct": 1
+                },
+                {
+                    "id": 3,
+                    "name": "Ranil Wickramasinghe",
+                    "correct": 0
+                },
+                {
+                    "id": 4,
+                    "name": "Sajith Premadasa",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Who is the president of America?",
+            "type": "mcq",
+            "marks": 20,
+            "answers": [
+                {
+                    "id": 1,
+                    "name": "Donal Trump",
+                    "correct": 1
+                },
+                {
+                    "id": 2,
+                    "name": "Gotabaya Rajapakshe",
+                    "correct": 0
+                },
+                {
+                    "id": 3,
+                    "name": "Ranil Wickramasinghe",
+                    "correct": 0
+                },
+                {
+                    "id": 4,
+                    "name": "Sajith Premadasa",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "5 + 5 equals to?",
+            "type": "mcq",
+            "marks": 20,
+            "answers": [
+                {
+                    "id": 1,
+                    "name": "100",
+                    "correct": 0
+                },
+                {
+                    "id": 2,
+                    "name": "10",
+                    "correct": 1
+                },
+                {
+                    "id": 3,
+                    "name": "5",
+                    "correct": 0
+                },
+                {
+                    "id": 4,
+                    "name": "23",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Whos is the prime minister of Sri Lanka?",
+            "type": "mcq",
+            "marks": 20,
+            "answers": [
+                {
+                    "id": 1,
+                    "name": "Mahinda Rajapakshe",
+                    "correct": 1
+                },
+                {
+                    "id": 2,
+                    "name": "Gotabaya Rajapakshe",
+                    "correct": 0
+                },
+                {
+                    "id": 3,
+                    "name": "Ranil Wickramasinghe",
+                    "correct": 0
+                },
+                {
+                    "id": 4,
+                    "name": "Sajith Premadasa",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "What Organ helps pump blood through the entire body?",
+            "type": "mcq",
+            "marks": 20,
+            "answers": [
+                {
+                    "id": 1,
+                    "name": "Kidney",
+                    "correct": 0
+                },
+                {
+                    "id": 2,
+                    "name": "Heart",
+                    "correct": 1
+                },
+                {
+                    "id": 3,
+                    "name": "Liver",
+                    "correct": 0
+                },
+                {
+                    "id": 4,
+                    "name": "Brain",
+                    "correct": 0
+                }
+            ]
+        }
+    ]
+}

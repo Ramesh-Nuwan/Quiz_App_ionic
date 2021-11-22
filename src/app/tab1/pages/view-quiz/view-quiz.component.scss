@@ -1,0 +1,55 @@
+.content {
+  --background: url("../../../../assets/images/background.png");
+  color: white !important;
+}
+
+.timer {
+  color: white;
+  background-color: #6949fd;
+  font-weight: bold;
+  padding: 0.3em 1em;
+  border-radius: 0.3em;
+  font-size: 18px;
+}
+
+ion-item:active {
+  background-color: #37e9bb;
+  border-radius: 0.5em;
+}
+
+.scoreBackground {
+  display: flex;
+  justify-content: center;
+  background: url("../../../../assets/images/scoreBackground.png");
+}
+
+ion-badge {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  border-radius: 1em;
+}
+
+.loading {
+  --background: #ffffff;
+  --spinner-color: #433489;
+  color: black;
+  font-weight: bold;
+}
+
+.alert_div {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.alert {
+  --background: #ffffff;
+  --color: rgb(0, 0, 0);
+}
+
+.alert ion-card-subtitle {
+  --color: rgb(0, 0, 0);
+  font-weight: bold;
+}

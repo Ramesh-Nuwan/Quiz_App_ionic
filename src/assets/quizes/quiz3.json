@@ -1,0 +1,149 @@
+{
+    "id": 3,
+    "name": "quiz 3",
+    "time": 30,
+    "pass_mark": 30,
+    "total_questions": 5,
+    "questions": [
+        {
+            "id": 1,
+            "name": "Who is the president of Sri Lanka?",
+            "type": "mcq",
+            "marks": 20,
+            "answers": [
+                {
+                    "id": 1,
+                    "name": "Mahinda Rajapakshe",
+                    "correct": 0
+                },
+                {
+                    "id": 2,
+                    "name": "Gotabaya Rajapakshe",
+                    "correct": 1
+                },
+                {
+                    "id": 3,
+                    "name": "Ranil Wickramasinghe",
+                    "correct": 0
+                },
+                {
+                    "id": 4,
+                    "name": "Sajith Premadasa",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "How many sides are there in a cube?",
+            "type": "mcq",
+            "marks": 20,
+            "answers": [
+                {
+                    "id": 1,
+                    "name": "One ",
+                    "correct": 0
+                },
+                {
+                    "id": 2,
+                    "name": "Two",
+                    "correct": 0
+                },
+                {
+                    "id": 3,
+                    "name": "Three",
+                    "correct": 0
+                },
+                {
+                    "id": 4,
+                    "name": "six",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "40+5(6-4) equals to?",
+            "type": "mcq",
+            "marks": 20,
+            "answers": [
+                {
+                    "id": 1,
+                    "name": "100",
+                    "correct": 0
+                },
+                {
+                    "id": 2,
+                    "name": "90",
+                    "correct": 1
+                },
+                {
+                    "id": 3,
+                    "name": "150",
+                    "correct": 0
+                },
+                {
+                    "id": 4,
+                    "name": "360",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Which is the vowel in the English alphabet series?",
+            "type": "mcq",
+            "marks": 20,
+            "answers": [
+                {
+                    "id": 1,
+                    "name": "A",
+                    "correct": 0
+                },
+                {
+                    "id": 2,
+                    "name": "U",
+                    "correct": 1
+                },
+                {
+                    "id": 3,
+                    "name": "L",
+                    "correct": 0
+                },
+                {
+                    "id": 4,
+                    "name": "M",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "How many colors are there in rainbow?",
+            "type": "mcq",
+            "marks": 20,
+            "answers": [
+                {
+                    "id": 1,
+                    "name": "One",
+                    "correct": 0
+                },
+                {
+                    "id": 2,
+                    "name": "Seven",
+                    "correct": 1
+                },
+                {
+                    "id": 3,
+                    "name": "Five",
+                    "correct": 0
+                },
+                {
+                    "id": 4,
+                    "name": "Nine",
+                    "correct": 0
+                }
+            ]
+        }
+    ]
+}

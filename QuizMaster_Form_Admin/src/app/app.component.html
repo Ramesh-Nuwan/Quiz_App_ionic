@@ -1,0 +1,19 @@
+<nav >
+  <mat-toolbar color="primary" style="width: 100%; justify-content: center; color: #01ffff;">
+    <div  style="width: 50%;">
+      <h1 style="font-weight: bold; font-size: xx-large;" >{{title}}</h1>
+    </div>
+
+    <div  style="width: 50%;">
+      <button *ngIf = "isLogin" type="submit" mat-raised-button (click)="Logout()" style="float: right; width: 25%; margin-left: 2%;">LogOut</button>
+      <h5 *ngIf = "isLogin" style="float: right; font-weight: lighter;">Hi</h5>
+      
+    </div>
+  </mat-toolbar>
+</nav>
+
+<div style="margin: 2%;">
+
+  <router-outlet></router-outlet>
+
+</div>

@@ -1,0 +1,160 @@
+<!-- <ion-content fullscreen>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div style="text-align: center;">
+          <div>
+            <ion-icon class="lock" name="lock-open"></ion-icon>
+          </div>
+          <div style="margin-top: 10px;">
+            <ion-icon class="star" name="star-outline"></ion-icon>
+            <ion-icon class="star" name="star-outline"></ion-icon>
+            <ion-icon class="star" name="star-outline"></ion-icon>
+          </div>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div style="text-align: center;"><ion-icon class="lock" name="lock-closed"></ion-icon></div>
+      </ion-col>
+      <ion-col>
+        <div style="text-align: center;"><ion-icon class="lock" name="lock-closed"></ion-icon></div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div style="text-align: center;"><ion-icon class="lock" name="lock-closed"></ion-icon></div>
+      </ion-col>
+      <ion-col>
+        <div style="text-align: center;"><ion-icon class="lock" name="lock-closed"></ion-icon></div>
+      </ion-col>
+      <ion-col>
+        <div style="text-align: center;"><ion-icon class="lock" name="lock-closed"></ion-icon></div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div style="text-align: center;"><ion-icon class="lock" name="lock-closed"></ion-icon></div>
+      </ion-col>
+      <ion-col col-6>
+        <div style="text-align: center;"><ion-icon class="lock" name="lock-closed"></ion-icon></div>
+      </ion-col>
+      <ion-col>
+        <div style="text-align: center;"><ion-icon class="lock" name="lock-closed"></ion-icon></div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <div style="text-align: center;"><ion-icon class="lock" name="lock-closed"></ion-icon></div>
+      </ion-col>
+      <ion-col>
+        <div style="text-align: center;"><ion-icon class="lock" name="lock-closed"></ion-icon></div>
+      </ion-col>
+      <ion-col>
+        <div style="text-align: center;"><ion-icon class="lock" name="lock-closed"></ion-icon></div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col offset-4>
+        <div style="text-align: center;"><ion-icon class="lock" name="lock-closed"></ion-icon></div>
+      </ion-col>
+      <ion-col>
+        <div style="text-align: center;"><ion-icon class="lock" name="lock-closed"></ion-icon></div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div style="text-align: center;"><ion-icon class="lock" name="lock-closed"></ion-icon></div>
+      </ion-col>
+      <ion-col offset-4>
+        <div style="text-align: center;"><ion-icon class="lock" name="lock-closed"></ion-icon></div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content> -->
+
+<ion-content [fullscreen]="true" >
+
+  <div class="content">
+
+    <ion-row>
+      <ion-col size="12" style="text-align: center; font-weight: bold; margin-top: 2%;">
+        <ion-label style="color: #37E9BB; font-family: 'Nunito-ExtraBold'; font-size: 24px;">
+          Levels
+        </ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-grid fixed *ngIf="isDataLoad">
+      <ion-row style="padding: 1%;">
+        <ion-col size="6" class="ion-wrap ion-padding" *ngFor="let level of levelDetails; let i=index" >
+          <div  *ngIf="currentLevel >= level.level" [routerLink]="[currentLevel, 'quiz' , level.level]" style="text-align: center;position: relative;">
+            <div >
+              <img src="../../assets/images/{{level.image}}.png" alt="" style="margin: 10px 0; padding: 0%; position: relative;">          
+            </div>
+            <div style="position: absolute; top: 34%; left: 30%;">
+              <div style="color: white; font-family: 'Nunito-ExtraBold'; font-size: 24px;" >Level</div>
+              <div style="color: white; font-family: 'Nunito-ExtraBold'; font-size: 24px;">{{level.level}}</div>
+            </div>
+            <!-- <div style="text-align: end;">
+              <ion-icon class="lock" name="lock-open" style="color: gray;"></ion-icon>
+            </div> -->
+            <div *ngIf="!levelMarks['L'+level.id]">
+              <ion-icon class="star" name="star-outline" style="color: #facd2b;position: absolute;top: 15px;left: 12%;"></ion-icon>
+              <ion-icon class="star" name="star-outline" style="color: #facd2b;position: absolute;top: 0px;left: 40%;" ></ion-icon>
+              <ion-icon class="star" name="star-outline" style="color: #facd2b;position: absolute;top: 15px;left: 70%;"></ion-icon>
+            </div>
+  
+            <div *ngIf="levelMarks['L'+level.id] >=0">
+  
+              <div *ngIf="levelMarks['L'+level.id] <= 30">
+                <ion-icon class="star" name="star-outline" style="color: #facd2b;position: absolute;top: 15px;left: 12%;"></ion-icon>
+                <ion-icon class="star" name="star-outline" style="color: #facd2b;position: absolute;top: 0px;left: 40%;" ></ion-icon>
+                <ion-icon class="star" name="star-outline" style="color: #facd2b;position: absolute;top: 15px;left: 70%;"></ion-icon>
+              </div>
+  
+              <div *ngIf="levelMarks['L'+level.id] >= 30 && levelMarks['L'+level.id] < 60 ">
+                <ion-icon class="star" name="star" style="color: #facd2b;position: absolute;top: 15px;left: 12%;"></ion-icon>
+                <ion-icon class="star" name="star" style="color: #facd2b; position: absolute;top: 0px;left: 40%; opacity: 0.4;" ></ion-icon>
+                <ion-icon class="star" name="star" style="color: #facd2b;position: absolute;top: 15px;left: 70%; opacity: 0.4;"></ion-icon>
+              </div>
+  
+              <div *ngIf="levelMarks['L'+level.id] >= 60 && levelMarks['L'+level.id] < 80">
+                <ion-icon class="star" name="star" style="color: #facd2b; position: absolute;top: 15px;left: 12%;"></ion-icon>
+                <ion-icon class="star" name="star" style="color: #facd2b; position: absolute;top: 0px;left: 40%;" ></ion-icon>
+                <ion-icon class="star" name="star" style="color: #facd2b;position: absolute;top: 15px;left: 70%; opacity: 0.4;"></ion-icon>
+              </div>
+  
+              <div *ngIf="levelMarks['L'+level.id] >= 80">
+                <ion-icon class="star" name="star" style="color: #facd2b;position: absolute;top: 15px;left: 12%;" ></ion-icon>
+                <ion-icon class="star" name="star" style="color: #facd2b;position: absolute;top: 0px;left: 40%;" ></ion-icon>
+                <ion-icon class="star" name="star" style="color: #facd2b;position: absolute;top: 15px;left: 70%;" ></ion-icon>
+              </div>
+  
+            </div>
+          </div>
+  
+  
+          <div *ngIf="currentLevel < level.level" style=" text-align: center;position: relative;">
+            <div>
+              <img src="../../assets/images/{{level.image}}.png" alt="" style="margin: 10px 0; padding: 0%; position: relative;opacity: 0.2;">
+            </div>
+  
+            <div style="position: absolute; top: 34%; left: 30%;">
+              <div style="color: #facd2b; font-family: 'Nunito-ExtraBold'; font-size: 24px; opacity: 0.2;" >Level</div>
+              <div style="color: #facd2b; font-family: 'Nunito-ExtraBold'; font-size: 24px; opacity: 0.2;">{{level.level}}</div>
+            </div>
+  
+            <div style="position: absolute;top: 35%;left: 39%;">
+              <ion-icon *ngIf="currentLevel < level.level" class="lock" name="lock-closed" style="color: #ccd810;"></ion-icon>
+            </div>
+            <div style="margin-top: 10px; opacity: 0.2;">
+              <ion-icon class="star" name="star-outline" style="color: #facd2b;position: absolute;top: 15px;left: 12%;"></ion-icon>
+              <ion-icon class="star" name="star-outline" style="color: #facd2b;position: absolute;top: 0px;left: 40%;"></ion-icon>
+              <ion-icon class="star" name="star-outline" style="color: #facd2b;position: absolute;top: 15px;left: 70%;"></ion-icon>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>

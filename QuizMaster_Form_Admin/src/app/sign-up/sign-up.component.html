@@ -1,0 +1,38 @@
+<div class="container">
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <mat-card >
+      <mat-card-header fxLayout="row" fxLayoutAlign="center center" style="margin-bottom: 8%;">
+        <mat-card-title>Register</mat-card-title>
+      </mat-card-header>
+  
+      <form  [formGroup]="form">
+  
+        <mat-card-content>
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Username" formControlName="username" #username required>
+          </mat-form-field>
+  
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" formControlName="email" #email required>
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" #password required>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+  
+        </mat-card-content>
+  
+        <div fxLayout="row" fxLayoutAlign="end center">
+          <button mat-raised-button (click)="Register(username.value, email.value, password.value)" style="width: 30%; font-size: large; color: white; background-color: rgb(18, 1, 56);">Register</button>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+</div>
+

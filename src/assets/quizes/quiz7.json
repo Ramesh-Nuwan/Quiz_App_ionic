@@ -1,0 +1,149 @@
+{
+    "id": 7,
+    "name": "quiz 7",
+    "time": 30,
+    "pass_mark": 30,
+    "total_questions": 5,
+    "questions": [
+        {
+            "id": 1,
+            "name": " How many letters are there in the English alphabet?",
+            "type": "mcq",
+            "marks": 20,
+            "answers": [
+                {
+                    "id": 1,
+                    "name": "20",
+                    "correct": 0
+                },
+                {
+                    "id": 2,
+                    "name": "28",
+                    "correct": 0
+                },
+                {
+                    "id": 3,
+                    "name": "26",
+                    "correct": 1
+                },
+                {
+                    "id": 4,
+                    "name": "30",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Which month of the year has the least number of days?",
+            "type": "mcq",
+            "marks": 20,
+            "answers": [
+                {
+                    "id": 1,
+                    "name": "January",
+                    "correct": 0
+                },
+                {
+                    "id": 2,
+                    "name": "February",
+                    "correct": 1
+                },
+                {
+                    "id": 3,
+                    "name": "March",
+                    "correct": 0
+                },
+                {
+                    "id": 4,
+                    "name": "December",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "How many colors are there in rainbow?",
+            "type": "mcq",
+            "marks": 20,
+            "answers": [
+                {
+                    "id": 1,
+                    "name": "5",
+                    "correct": 0
+                },
+                {
+                    "id": 2,
+                    "name": "6",
+                    "correct": 0
+                },
+                {
+                    "id": 3,
+                    "name": "7",
+                    "correct": 1
+                },
+                {
+                    "id": 4,
+                    "name": "9",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Which is the world’s largest flower?",
+            "type": "mcq",
+            "marks": 20,
+            "answers": [
+                {
+                    "id": 1,
+                    "name": "Rafflesia",
+                    "correct": 1
+                },
+                {
+                    "id": 2,
+                    "name": "Sunflower",
+                    "correct": 0
+                },
+                {
+                    "id": 3,
+                    "name": "Water lily",
+                    "correct": 0
+                },
+                {
+                    "id": 4,
+                    "name": "Lotus",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Who was the first man to walk on the moon?",
+            "type": "mcq",
+            "marks": 20,
+            "answers": [
+                {
+                    "id": 1,
+                    "name": "Neil Armstrong",
+                    "correct": 1
+                },
+                {
+                    "id": 2,
+                    "name": "Albert Einstein",
+                    "correct": 0
+                },
+                {
+                    "id": 3,
+                    "name": "Archimedes",
+                    "correct": 0
+                },
+                {
+                    "id": 4,
+                    "name": "Charles Darwin",
+                    "correct": 0
+                }
+            ]
+        }
+    ]
+}

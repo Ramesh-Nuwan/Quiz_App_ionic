@@ -1,0 +1,150 @@
+{
+    "id": 8,
+    "name": "quiz 8",
+    "time": 30,
+    "pass_mark": 25,
+    "shuffle": true,
+    "total_questions": 5,
+    "questions": [
+        {
+            "id": 1,
+            "name": "What is the biggest animal that has ever lived?",
+            "type": "mcq",
+            "marks": 20,
+            "answers": [
+                {
+                    "id": 1,
+                    "name": "African elephant",
+                    "correct": 0
+                },
+                {
+                    "id": 2,
+                    "name": "Blue whale",
+                    "correct": 1
+                },
+                {
+                    "id": 3,
+                    "name": "Horse",
+                    "correct": 0
+                },
+                {
+                    "id": 4,
+                    "name": "Lion",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "How many days do we have in a week?",
+            "type": "mcq",
+            "marks": 20,
+            "answers": [
+                {
+                    "id": 1,
+                    "name": "5",
+                    "correct": 0
+                },
+                {
+                    "id": 2,
+                    "name": "6",
+                    "correct": 0
+                },
+                {
+                    "id": 3,
+                    "name": "7",
+                    "correct": 1
+                },
+                {
+                    "id": 4,
+                    "name": "8",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "How many days are there in a normal year?",
+            "type": "mcq",
+            "marks": 20,
+            "answers": [
+                {
+                    "id": 1,
+                    "name": "370",
+                    "correct": 0
+                },
+                {
+                    "id": 2,
+                    "name": "365",
+                    "correct": 1
+                },
+                {
+                    "id": 3,
+                    "name": "360",
+                    "correct": 0
+                },
+                {
+                    "id": 4,
+                    "name": "380",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Which animal is known as the ‘Ship of the Desert?’",
+            "type": "mcq",
+            "marks": 20,
+            "answers": [
+                {
+                    "id": 1,
+                    "name": "Tiger",
+                    "correct": 0
+                },
+                {
+                    "id": 2,
+                    "name": "Camel",
+                    "correct": 1
+                },
+                {
+                    "id": 3,
+                    "name": "Snake",
+                    "correct": 0
+                },
+                {
+                    "id": 4,
+                    "name": "Elephant",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Whos is the president of Sri Lanka?",
+            "type": "mcq",
+            "marks": 20,
+            "answers": [
+                {
+                    "id": 1,
+                    "name": "Mahinda Rajapakshe",
+                    "correct": 0
+                },
+                {
+                    "id": 2,
+                    "name": "Gotabaya Rajapakshe",
+                    "correct": 1
+                },
+                {
+                    "id": 3,
+                    "name": "Ranil Wickramasinghe",
+                    "correct": 0
+                },
+                {
+                    "id": 4,
+                    "name": "Sajith Premadasa",
+                    "correct": 0
+                }
+            ]
+        }
+    ]
+}

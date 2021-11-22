@@ -1,0 +1,129 @@
+<ion-content [fullscreen]="true" class="ion-padding content" >
+
+ <div *ngIf="question">
+
+      <ion-row class="ion-align-items-center ion-justify-content-center">
+        <ion-col size="4" style="left: 13%; text-align: center;">
+          <ion-label style="color: #37E9BB; font-family: 'Nunito-ExtraBold'; font-size: 24px;">
+            Level {{level}}
+          </ion-label>
+        </ion-col>
+          
+        <ion-col size="3" style=" left: 21%; text-align: center;">
+          <ion-button fill="outline"  style="color: #37E9BB; --border-color: #37E9BB; font-family: 'Nunito-Bold'; font-size: 14px; text-transform: none; --border-radius: 0.4em;" [routerLink]="['/tabs/tab1/userlevel']">Quit</ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12" style="text-align: center;">
+          <ion-label style="color: #ffffff; font-family: 'Nunito-Regular'; font-size: 12px;">
+            Time Left
+          </ion-label>
+
+          <div style="margin-top: 2%; ">
+            <countdown #timer class="timer" [config]="config" (event)="handleTimer($event)"></countdown>
+          </div>
+
+        </ion-col>
+      </ion-row>
+
+  
+    <ion-row>
+      <ion-col size="12" style="padding-left: 17px;">
+        <ion-label style="color: #37E9BB; font-family: 'Nunito-SemiBold'; font-size: 12px;">{{question.id}} / {{total_question}}</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-card color="transparent" style="margin-top: 0px; box-shadow: none;">
+      <ion-card-header style="padding-left: 8px;">
+        <ion-card-title style="color: white; font-family: 'Nunito-SemiBold'; font-size: 24px;">{{ question.name }}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  
+    <ion-card color="transparent" style=" margin-left: 0; box-shadow: none;" (click)="saveAnswer(question,answer)" *ngFor="let answer of question.answers; let i=index">
+      <ion-card-content style="padding-left: 0%; padding-bottom: 0%;" >
+        <ion-item color="transparent"  lines="none">
+          <ion-badge style="background-image: linear-gradient(to top, #433489, #7b5efc); font-family: 'Nunito-Bold'; font-size: 24px;">{{ answer.id}}</ion-badge>
+          <ion-label style="margin-left: 0.5em; color: white; font-family: 'Nunito-Bold'; font-size: 24px;">{{ answer.name }}</ion-label>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+    
+  <div style="text-align: center;" *ngIf="showResult" >
+
+    <ion-label style=" font-family: 'Nunito-ExtraBold'; font-size: 24px; color: aqua;">
+      Results
+    </ion-label>
+    <div style="display: flex; flex-direction: column; align-items: flex-start;">
+      <h5 style="color: white; font-family: 'Nunito-Regular'; font-size: 24px;">Total Correct answers</h5>
+      <p style="color: aqua; font-family: 'Nunito-SemiBold'; font-size: 18px;" >{{correct_answers}} out of {{total_question}} Questions</p>
+    </div>
+
+    <div *ngIf="userStatus == 'pass'">
+
+      <ion-card class="ion-no-padding" style=" border-radius: 1em; background-image: linear-gradient(to top, #433489, #7b5efc);">
+        <ion-card-header>
+          <ion-card-title style="color: white; font-family: 'Nunito-SemiBold'; font-size: 32px;">Your Final Score is</ion-card-title>
+        </ion-card-header>
+        <ion-card-content class="scoreBackground">
+            <ion-card style=" background-image: linear-gradient(to top, #faab2c, #facd2b); width: 10em; height: 10em; border-radius: 5em;">
+              <ion-card-content style=" top: 14%;">
+                <h1 style=" font-family: 'Nunito-ExtraBold'; font-size: 60px; color: white; ">{{totalMarks}}</h1>
+              </ion-card-content>
+            </ion-card>
+
+
+        </ion-card-content>
+      </ion-card>
+
+      <ion-button style=" width: 8em; height: 1.4em; --background: #6749FD; font-family: 'Nunito-Bold'; font-size: 28px; text-transform: none; --border-radius: 0.4em;" [routerLink]="['/tabs/tab1/userlevel']">Next Level</ion-button>
+    </div>
+
+    <div *ngIf="userStatus == 'fail'">
+      <ion-card class="ion-no-padding" style="border-radius: 1em; background-image: linear-gradient(to top, #4d0094, rgb(138 67 255));">
+        <ion-card-header>
+          <ion-card-title style="color: white; font-family: 'Nunito-SemiBold'; font-size: 32px;">Your Final Score is</ion-card-title>
+        </ion-card-header>
+        <ion-card-content class="scoreBackground">
+          <ion-card style="background-image: linear-gradient(to top, #faab2c, #facd2b); width: 10em; height: 10em; border-radius: 5em;">
+            <ion-card-content style=" top: 14%;">
+              <h1 style="color: white; font-family: 'Nunito-ExtraBold'; font-size: 60px;">{{totalMarks}}</h1>
+            </ion-card-content>
+          </ion-card>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-buttons style="flex-direction: row; justify-content: center;" >
+        <ion-button  [routerLink]="['/tabs/tab1/userlevel']" style=" color: white; width: 8em; height: 1.4em; text-transform: none; font-family: 'Nunito-Bold'; font-size: 28px; --background: #6749FD; --border-radius: 0.4em;">
+          <ion-icon slot="start" name="reload" style="color: #ffffff" ></ion-icon>
+          Try Again
+        </ion-button>
+      </ion-buttons>
+
+    </div>
+  </div>
+
+  <div class="alert_div" *ngIf ="show_alert">
+    <ion-card class="alert">
+      <ion-card-header>
+        <ion-card-subtitle style="font-weight: 800; font-size: larger;">Connection Error</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content style="font-size: medium;">
+        Sorry, App can't reach to level. May be a Connection Problem.
+      </ion-card-content>
+
+      <ion-footer>
+        <ion-row>
+          <ion-col style="text-align: end; padding-right: 1.5em;">
+            <ion-button [routerLink]="['/tabs/tab1/userlevel']" fill="outline" size="small" color="#433489" style=" color: #433489;">OK</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-footer>
+    </ion-card>
+  </div>
+
+</ion-content>
+
+

@@ -1,0 +1,203 @@
+<div class="container">
+    <div style="color: rgb(154, 81, 250);">
+        <h2 style="font-weight: bold;">Quiz Form</h2>
+        <p>Fill the quiz details to add questions and answers to the quiz</p>
+    </div>
+    <br>
+    <br>
+    <div >
+        <form [formGroup]="form">
+
+            <div class="form_top" fxLayout="row">
+                <div fxFlex="50%" >
+
+                    <div fxLayout="row">
+                        <div fxFlex="30%" fxLayoutAlign="start center">
+                            <h3 >Quiz Name</h3>
+                        </div>
+                        <div fxFlex="70%" style="padding-right: 2em;">
+                            <mat-form-field appearance="outline" style="width: 100%; font-size: x-small;">
+                                <mat-label>Name here</mat-label>
+                                <mat-hint>Name must be as "quiz1"</mat-hint>
+                                <input matInput placeholder="quiz1" formControlName="name" required/>
+                            </mat-form-field> 
+                        </div>
+                    </div>
+                    
+
+                    <div fxLayout="row">
+                        <div fxFlex="30%" fxLayoutAlign="start center">
+                            <h3>Passmark</h3>
+                        </div>
+                        <div fxFlex="70%" style="padding-right: 2em;">
+                            <mat-form-field appearance="outline" style="width: 100%; font-size: x-small;">    
+                                <mat-label>Passmark</mat-label>
+                                <input matInput type="number" placeholder="75%" formControlName="pass_mark" required />
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div fxLayout="row">
+                        <div fxFlex="30%" fxLayoutAlign="start center">
+                            <h3>Quiz Level</h3>
+                        </div>
+                        <div fxFlex="70%" style="padding-right: 2em;">
+                            <mat-form-field appearance="outline" style="width: 100%; font-size: x-small;">
+                                <mat-label>Select Quiz Level</mat-label>
+                                <mat-select formControlName="quiz_level">
+                                  <mat-option *ngFor="let level of levels" [value]="level">
+                                    Level {{level}}
+                                  </mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div fxFlex="50%" style="margin-left: 5%;">
+
+                    <div fxLayout="row">
+                        <div fxFlex="30%" fxLayoutAlign="start center">
+                            <h3>Quiz Time</h3>
+                        </div>
+                        <div fxFlex="70%" style="padding-right: 2em;">
+                            <mat-form-field appearance="outline" style=" width: 100%; font-size: x-small;">
+                                <mat-label>Quiz Time</mat-label>
+                                <input matInput type="number" placeholder="00:30" formControlName="time" required/>
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+
+                    <div fxLayout="row">
+                        <div fxFlex="30%" fxLayoutAlign="start center">
+                            <h3>Total Questions</h3>
+                        </div>
+                        <div fxFlex="70%" style="padding-right: 2em;">
+                            <mat-form-field appearance="outline" style=" width: 100%; font-size: x-small;">
+                                <mat-label>Total Questions</mat-label>
+                                <input matInput type="number" placeholder="20 Questions" formControlName="total_questions"  required/>
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div formArrayName="questions" style="margin-bottom: 1%; ">
+
+                <div *ngFor="let q of questions().controls; let q_Index = index" style=" border: thin solid rgb(154, 81, 250); padding: 1em; margin-bottom: 1em; border-radius: 1em;">
+                    <div [formGroupName]="q_Index">
+                        <div fxLayout="row" >
+                            <h2 style="font-weight: bold; color: rgb(154, 81, 250);">Question {{q_Index+1}}</h2>
+                        </div>
+
+                        <div fxLayout="row" >
+
+                            <div fxFlex="70%">
+                                <div fxFlex="19%">
+                                    <h3>Question</h3>
+                                </div>
+                                <div fxFlex="80%">
+                                    <mat-form-field appearance="outline" style="width: 80%;">
+                                        <mat-label>Question</mat-label>
+                                        <textarea matInput  placeholder="Type your question here..." formControlName="name" required></textarea>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+                            <div fxFlex="30%">
+                                <div fxFlex="30%" style="padding-top: 0.5em;">
+                                    <h3>Marks</h3>
+                                </div>
+                                <div fxFlex="70%" style="padding-right: 1em;">
+                                    <mat-form-field appearance="outline" style=" width: 100%; font-size: x-small;">
+                                        <mat-label>Marks</mat-label>
+                                        <input matInput type="number" placeholder="10" formControlName="marks" required/>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        <div fxLayout="row" >
+                            <h2 style="font-weight: bold; color: rgb(154, 81, 250);">Answers</h2>
+                        </div>
+
+                    
+                        <div formArrayName="answers">
+                            
+                            <div class="answer" *ngFor="let a of answers(q_Index).controls; let a_Index = index">
+                                <div fxLayout="row" [formGroupName]="a_Index">
+
+                                    <div fxFlex="70%">
+
+                                        <div fxLayout="row">
+                                            <div fxFlex="19%">
+                                                <h3>Answer</h3>
+                                            </div>
+                                            <div fxFlex="80%">
+                                                <mat-form-field appearance="outline" style="width: 80%; font-size: x-small;">
+                                                    <mat-label>Answer</mat-label>
+                                                    <input matInput placeholder="Type your answer here..." formControlName="name" required />
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+
+                                        <div fxLayout="row">
+                                            <div fxFlex="19%">
+                                                <h4>Correct Answer</h4>
+                                            </div>
+                                            <div fxFlex="80%">
+                                                <mat-radio-group formControlName="correct">
+                                                    <span><mat-radio-button color="primary" checked value="0">No</mat-radio-button></span>
+                                                    <span style="margin-left: 2%;"><mat-radio-button color="primary" value="1" >Yes</mat-radio-button></span>
+                                                </mat-radio-group>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div fxFlex="30%">
+                                        <button class="remove_btn" mat-raised-button color="accent"  (click)="removeAnswer(q_Index, a_Index)" style="width: 100%;" >Remove Answer</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div fxLayout="row" fxLayoutAlign="start center">
+                                <button fxFlex="20%" mat-raised-button color="primary" (click)="addAnswer(q_Index, a_Index)">Add Answers</button>
+                            
+                                <button fxFlex="20%" class="remove_btn" mat-raised-button color="accent" (click)="removeQuestion(q_Index)" style=" width:100%; margin-left: 5%;">Remove Question</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div >
+                <button mat-raised-button color="primary" (click)="addQuestion()" style="width: 20%">Add Questions</button>
+            </div>
+
+            <br>
+            <br>
+            <div >
+                <button mat-raised-button type="submit" style="width: 20%; color: white; background-color: rgb(18, 1, 56); left: 50%;" (click)="submit()">Submit</button>
+            </div>
+        </form>
+
+
+        <!--<br>
+        <br>
+        <button mat-raised-button color="primary" (click)="SaveQuiz()">Creat Quiz</button>
+
+        <button mat-raised-button color="primary" (click)="GetAllQuiz()">Get Quiz List</button> -->
+    </div>
+</div>
+
